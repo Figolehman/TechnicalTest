@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import FirebaseStorage
+import FirebaseFirestore
+import SwiftUI
 
-class PostViewModel: ObservableObject {
-    @Published var posts: [Post] = []
+class TextViewModel: ObservableObject {
+    @Published var texts: [TextModel] = []
     
-    //MARK: - retrieve data
-    func fetchPosts() {
-        guard let url = URL(string: "https://6572d11d192318b7db411001.mockapi.io/posts") else {
+
+    func fetchTexts() {
+        guard let url = URL(string: "https://657394fdf941bda3f2aeff3f.mockapi.io/texts") else {
             print("invalid url")
             return
         }
@@ -26,15 +29,9 @@ class PostViewModel: ObservableObject {
             guard let data else { return }
             
             do {
-                let formatter = DateFormatter()
-                formatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss.SSS'Z'"
-
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(formatter)
-                
-                let result = try decoder.decode([Post].self, from: data)
+                let result = try JSONDecoder().decode([TextModel].self, from: data)
                 DispatchQueue.main.async {
-                    self.posts = result
+                    self.texts = result
                 }
             } catch let jsonError {
                 print(jsonError.localizedDescription)
@@ -42,13 +39,13 @@ class PostViewModel: ObservableObject {
         }.resume()
     }
     
-    func createPost(post: [String: Any]) {
-        guard let url = URL(string: "https://6572d11d192318b7db411001.mockapi.io/posts") else {
+    func createText(text: [String: Any]) {
+        guard let url = URL(string: "https://657394fdf941bda3f2aeff3f.mockapi.io/texts") else {
             print("invalid url")
             return
         }
         
-        let dataPost = try! JSONSerialization.data(withJSONObject: post)
+        let dataPost = try! JSONSerialization.data(withJSONObject: text)
         var request = URLRequest(url: url)
         
         request.httpMethod = "POST"
@@ -64,15 +61,7 @@ class PostViewModel: ObservableObject {
             guard let data else { return }
             
             do {
-                let formatter = DateFormatter()
-                formatter.dateFormat = "YYYY-MM-DD'T'HH:mm:ss.SSS'Z'"
-
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(formatter)
-                
-                
-                let result = try decoder.decode(Post.self, from: data)
-                
+                let result = try JSONDecoder().decode(TextModel.self, from: data)
                 
                 DispatchQueue.main.async {
                     print(result)
