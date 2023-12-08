@@ -5,8 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/twostraws/CodeScanner",
       "state" : {
-        "revision" : "8a9ce909a4ea502d4a2ccf327ae8c16b7e48e740",
-        "version" : "1.1.0"
+        "revision" : "bf5d7087015620b250ee6c865b3c9039fc159d1a",
+        "version" : "2.3.3"
+      }
+    },
+    {
+      "identity" : "iossecuritysuite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/securing/IOSSecuritySuite",
+      "state" : {
+        "revision" : "57dd401a406f9bf81b60dfe6d5305a27e0751dd4",
+        "version" : "1.9.10"
       }
     }
   ],

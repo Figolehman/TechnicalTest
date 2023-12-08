@@ -15,8 +15,12 @@ struct QRScannerView: View {
     var scannerSheet: some View {
         CodeScannerView(codeTypes: [.qr]) { result in
             if case let .success(code) = result {
-                self.scannedCode = code
+                self.scannedCode = code.string
                 self.isScanning = false
+                let url = URL(string: self.scannedCode)!
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
             }
             
         }

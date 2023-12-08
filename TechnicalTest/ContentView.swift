@@ -6,22 +6,33 @@
 //
 
 import SwiftUI
+import IOSSecuritySuite
 
 struct ContentView: View {
+    @State var isJailbroken: Bool = false
     var body: some View {
         NavigationView {
             List {
                 NavigationLink("CRUD API") {
-                    
+                    MockDataView()
                 }
                 NavigationLink("QR SCANNER") {
                     QRScannerView()
                 }
-                NavigationLink("JAILBREAK DETECTOR") {
-                    
+                Button("ANTI-JAILBREAK"){
+                    if IOSSecuritySuite.amIJailbroken() {
+                        isJailbroken = true
+
+                    } else {
+                        isJailbroken = false
+                        print("masuk")
+                    }
                 }
             }
         }
+        .alert(isPresented: $isJailbroken, content: {
+            Alert(title: Text("Your device is jailbroken"))
+        })
     }
 }
 

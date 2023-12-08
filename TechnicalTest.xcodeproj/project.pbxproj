@@ -12,7 +12,11 @@
 		1B1DE90D2B21DE7800B95D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DE90C2B21DE7800B95D06 /* Assets.xcassets */; };
 		1B1DE9102B21DE7800B95D06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DE90F2B21DE7800B95D06 /* Preview Assets.xcassets */; };
 		1B1DE9182B21E05100B95D06 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DE9172B21E05100B95D06 /* QRScannerView.swift */; };
-		1B1DE91B2B21E0CE00B95D06 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1B1DE91A2B21E0CE00B95D06 /* CodeScanner */; };
+		1B870A702B21EC7800163349 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 1B870A6F2B21EC7800163349 /* CodeScanner */; };
+		1B870A732B22091200163349 /* IOSSecuritySuite in Frameworks */ = {isa = PBXBuildFile; productRef = 1B870A722B22091200163349 /* IOSSecuritySuite */; };
+		1B870A752B22251E00163349 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B870A742B22251E00163349 /* Post.swift */; };
+		1B870A772B2225D900163349 /* MockDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B870A762B2225D900163349 /* MockDataView.swift */; };
+		1B870A792B2225FD00163349 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B870A782B2225FD00163349 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,9 @@
 		1B1DE90F2B21DE7800B95D06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B1DE9162B21DF9F00B95D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1B1DE9172B21E05100B95D06 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		1B870A742B22251E00163349 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1B870A762B2225D900163349 /* MockDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataView.swift; sourceTree = "<group>"; };
+		1B870A782B2225FD00163349 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1DE91B2B21E0CE00B95D06 /* CodeScanner in Frameworks */,
+				1B870A702B21EC7800163349 /* CodeScanner in Frameworks */,
+				1B870A732B22091200163349 /* IOSSecuritySuite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +67,10 @@
 				1B1DE9162B21DF9F00B95D06 /* Info.plist */,
 				1B1DE9082B21DE7700B95D06 /* TechnicalTestApp.swift */,
 				1B1DE90A2B21DE7700B95D06 /* ContentView.swift */,
+				1B870A762B2225D900163349 /* MockDataView.swift */,
 				1B1DE9172B21E05100B95D06 /* QRScannerView.swift */,
+				1B870A742B22251E00163349 /* Post.swift */,
+				1B870A782B2225FD00163349 /* PostViewModel.swift */,
 				1B1DE90C2B21DE7800B95D06 /* Assets.xcassets */,
 				1B1DE90E2B21DE7800B95D06 /* Preview Content */,
 			);
@@ -91,7 +102,8 @@
 			);
 			name = TechnicalTest;
 			packageProductDependencies = (
-				1B1DE91A2B21E0CE00B95D06 /* CodeScanner */,
+				1B870A6F2B21EC7800163349 /* CodeScanner */,
+				1B870A722B22091200163349 /* IOSSecuritySuite */,
 			);
 			productName = TechnicalTest;
 			productReference = 1B1DE9052B21DE7700B95D06 /* TechnicalTest.app */;
@@ -122,7 +134,8 @@
 			);
 			mainGroup = 1B1DE8FC2B21DE7700B95D06;
 			packageReferences = (
-				1B1DE9192B21E0CE00B95D06 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				1B870A6E2B21EC7800163349 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				1B870A712B22091200163349 /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */,
 			);
 			productRefGroup = 1B1DE9062B21DE7700B95D06 /* Products */;
 			projectDirPath = "";
@@ -150,9 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B870A792B2225FD00163349 /* PostViewModel.swift in Sources */,
 				1B1DE90B2B21DE7700B95D06 /* ContentView.swift in Sources */,
 				1B1DE9182B21E05100B95D06 /* QRScannerView.swift in Sources */,
 				1B1DE9092B21DE7700B95D06 /* TechnicalTestApp.swift in Sources */,
+				1B870A772B2225D900163349 /* MockDataView.swift in Sources */,
+				1B870A752B22251E00163349 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,21 +380,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B1DE9192B21E0CE00B95D06 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+		1B870A6E2B21EC7800163349 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.3.3;
+			};
+		};
+		1B870A712B22091200163349 /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/securing/IOSSecuritySuite";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.10;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1B1DE91A2B21E0CE00B95D06 /* CodeScanner */ = {
+		1B870A6F2B21EC7800163349 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B1DE9192B21E0CE00B95D06 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			package = 1B870A6E2B21EC7800163349 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		1B870A722B22091200163349 /* IOSSecuritySuite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B870A712B22091200163349 /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */;
+			productName = IOSSecuritySuite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
