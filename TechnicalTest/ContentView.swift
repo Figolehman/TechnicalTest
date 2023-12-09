@@ -13,26 +13,33 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("CRUD API") {
-                    MockDataView()
+                NavigationLink("CRUD TEXT API") {
+                    MockTextView()
+                }
+                NavigationLink("CRUD IMAGE API") {
+                    MockImageView()
                 }
                 NavigationLink("QR SCANNER") {
                     QRScannerView()
                 }
-                Button("ANTI-JAILBREAK"){
-                    if IOSSecuritySuite.amIJailbroken() {
-                        isJailbroken = true
-
-                    } else {
-                        isJailbroken = false
-                        print("masuk")
-                    }
-                }
             }
+            .onAppear(perform: {
+                detectJailBreak()
+            })
         }
         .alert(isPresented: $isJailbroken, content: {
             Alert(title: Text("Your device is jailbroken"))
         })
+    }
+    
+    func detectJailBreak() {
+        if IOSSecuritySuite.amIJailbroken() {
+            isJailbroken = true
+
+        } else {
+            isJailbroken = false
+            print("masuk")
+        }
     }
 }
 

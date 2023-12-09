@@ -9,44 +9,48 @@ import SwiftUI
 import PhotosUI
 
 struct MockImageView: View {
-    @StateObject var textVM = TextViewModel()
     @StateObject var imageVM = ImageViewModel()
     
     @State var isTooLong = false
     
     @State var isPresentingPostSheet = false
     
-    @State var text = ""
+    @State var itemForUpdate: ImageModel?
+    @State var inputUpdateImage: UIImage?
+    @State var inputUpdatePhoto: PhotosPickerItem?
     
-    @State var photos: PhotosPickerItem?
-    @State var image: UIImage?
+    @State var inputCreatePhoto: PhotosPickerItem?
+    @State var inputCreateImage: UIImage?
     
     var body: some View {
-        if textVM.texts.isEmpty && imageVM.displays.isEmpty && !isTooLong{
+        if imageVM.displays.isEmpty && !isTooLong{
             ProgressView()
                 .controlSize(.large)
                 .onAppear {
-                    textVM.fetchTexts()
+                    imageVM.fetchImages()
                     imageVM.retrieveImage()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
                         isTooLong = true
                     })
                 }
         } else {
-            
             List {
-                ForEach(textVM.texts, id: \.self) { text in
-                    Text("\(text.text)")
-                }
-            }
-            List {
-                ForEach(imageVM.displays, id: \.self) { display in
-                    Image(uiImage: display)
+                ForEach(Array(imageVM.displays.keys), id: \.self) { key in
+                    Image(uiImage: imageVM.displays[key]!)
                         .resizable()
                         .frame(width: 50, height: 50)
+                        .onTapGesture {
+                            itemForUpdate = ImageModel(id: "not neccessary", image: "\(key)")
+                        }
                 }
+                .onDelete(perform: { indexSet in
+                    for index in indexSet {
+                        
+                        imageVM.deleteImage(id: imageVM.images[index].id, image: imageVM.images[index].image)
+                    }
+                })
             }
-            .navigationTitle("Posts")
+            .navigationTitle("Images")
             .toolbar {
                 ToolbarItem {
                     Button("+"){
@@ -54,58 +58,76 @@ struct MockImageView: View {
                     }
                 }
             }
-            .sheet(isPresented: $isPresentingPostSheet, content: {
+            .sheet(item: $itemForUpdate, content: { item in
                 VStack {
-                    VStack{
-                        Text("Text")
-                        TextField("Insert Text", text: $text)
-                            .padding([.leading, .trailing])
-                            .multilineTextAlignment(.center)
-                    }
-                    Button("Create Text") {
-                        textVM.createText(text: ["text": text])
-                        isPresentingPostSheet = false
-                        reloadData()
-                    }
-                    .padding(.bottom)
-                    VStack{
-                        Text("Image")
-                        PhotosPicker(selection: $photos) {
-                            if let image = self.image {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                            } else {
-                                Text("Insert Image")
-                            }
-                        }
-                        .onChange(of: photos) { _ in
-                            Task {
-                                if let data = try? await photos?.loadTransferable(type: Data.self) {
-                                    if let image = UIImage(data: data) {
-                                        self.image = image
-                                    }
-                                }
-                            }
+                    Text("Change image to")
+                    
+                    PhotosPicker(selection: $inputUpdatePhoto) {
+                        if inputUpdateImage == nil {
+                            Text("Change Image")
+                        } else {
+                            Image(uiImage: inputUpdateImage!)
+                                .resizable()
+                                .frame(width: 100, height: 100)
                         }
                     }
-                    Button("Create Image") {
-                        let path = imageVM.uploadImage(image ?? UIImage())
-                        
-                        
-                        if image != nil {
-                            imageVM.createImage(image: ["image" : path])
-                            isPresentingPostSheet = false
+                    
+                    Button("Update Image") {
+                        if let image = self.inputUpdateImage{
+
+                            imageVM.uploadImage(image, id: item.image)
+                            
+                        }
+                        itemForUpdate = nil
+                        inputUpdatePhoto = nil
+                        inputUpdateImage = nil
+                    }
+                }
+            })
+            .onChange(of: inputUpdatePhoto, { _,_ in
+                Task {
+                    if let data = try? await inputUpdatePhoto?.loadTransferable(type: Data.self) {
+                        if let image = UIImage(data: data) {
+                            self.inputUpdateImage = image
                         }
                     }
                 }
             })
+            .sheet(isPresented: $isPresentingPostSheet, content: {
+                VStack{
+                    Text("Image")
+                    PhotosPicker(selection: $inputCreatePhoto) {
+                        if let image = self.inputCreateImage {
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                        } else {
+                            Text("Insert Image")
+                        }
+                    }
+                    .onChange(of: inputCreatePhoto) { _ in
+                        Task {
+                            if let data = try? await inputCreatePhoto?.loadTransferable(type: Data.self) {
+                                if let image = UIImage(data: data) {
+                                    self.inputCreateImage = image
+                                }
+                            }
+                        }
+                    }
+                }
+                Button("Create Image") {
+                    let path = imageVM.uploadImage(inputCreateImage ?? UIImage())
+                    
+                    
+                    if inputCreateImage != nil {
+                        imageVM.createImage(image: ["image" : path])
+                        isPresentingPostSheet = false
+                    }
+                    inputCreatePhoto = nil
+                    inputCreateImage = nil
+                }
+            })
         }
-    }
-    
-    func reloadData(){
-        textVM.fetchTexts()
-        imageVM.retrieveImage()
     }
 }
 

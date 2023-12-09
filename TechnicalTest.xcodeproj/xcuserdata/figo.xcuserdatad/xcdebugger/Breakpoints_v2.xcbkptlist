@@ -7,46 +7,108 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E677EAA6-8655-4A97-85A5-2C4D294D0A3B"
+            uuid = "11BEC555-CA4A-4676-A79B-A49FD4768F5A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TechnicalTest/PostViewModel.swift"
+            filePath = "TechnicalTest/ImageViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "uploadImage(_:)"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "retrieveImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9E82CF9-2BEE-425E-A375-BDA23768C42C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechnicalTest/ImageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "retrieveImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3233DE8-67AD-4DE8-84CF-6CA694076D9E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechnicalTest/ImageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "uploadImage(_:id:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E677EAA6-8655-4A97-85A5-2C4D294D0A3B - 9af64a90adc2d955"
+                  uuid = "A3233DE8-67AD-4DE8-84CF-6CA694076D9E - 4fed4cb71d9aed8f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TechnicalTest.PostViewModel.uploadImage(__C.UIImage) -&gt; Swift.String"
+                  symbolName = "closure #1 (Swift.Optional&lt;FirebaseStorage.StorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.uploadImage(_: __C.UIImage, id: Swift.String) -&gt; Swift.String"
                   moduleName = "TechnicalTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/PostViewModel.swift"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+               <Location
+                  uuid = "A3233DE8-67AD-4DE8-84CF-6CA694076D9E - 4fed4cb71d9aed8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;FirebaseStorage.StorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.uploadImage(_: __C.UIImage, id: Swift.String) -&gt; Swift.String"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  uuid = "A3233DE8-67AD-4DE8-84CF-6CA694076D9E - 398a5c44141a9b28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;FirebaseStorage.StorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.uploadImage(_: __C.UIImage, id: Swift.String) -&gt; Swift.String"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "1100">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
-                  uuid = "E677EAA6-8655-4A97-85A5-2C4D294D0A3B - a2ce634b35ea9ed6"
+                  uuid = "A3233DE8-67AD-4DE8-84CF-6CA694076D9E - 398a5c44141a9b28"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;FirebaseStorage.StorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.PostViewModel.uploadImage(__C.UIImage) -&gt; Swift.String"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;FirebaseStorage.StorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.uploadImage(_: __C.UIImage, id: Swift.String) -&gt; Swift.String"
                   moduleName = "TechnicalTest"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/PostViewModel.swift"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
                   offsetFromSymbolStart = "108">
                </Location>
             </Locations>
@@ -55,47 +117,126 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3DDD7335-E390-4EEA-B896-EBC23D376231"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TechnicalTest/PostViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "uploadImage(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BE0187E3-A4F5-45B4-8D9B-1C898D5FA31A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TechnicalTest/PostViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "uploadImage(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "48EEEAD9-9674-4CA6-BA76-4DD07AFCEAD6"
+            uuid = "CE351FDB-2552-45EB-8BDC-1274EA42CA6A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TechnicalTest/ImageViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "deleteImage(id:image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE351FDB-2552-45EB-8BDC-1274EA42CA6A - 9c325e3c0795b785"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.deleteImage(id: Swift.String, image: Swift.String) -&gt; ()"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "CE351FDB-2552-45EB-8BDC-1274EA42CA6A - 6758162e006f32f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.deleteImage(id: Swift.String, image: Swift.String) -&gt; ()"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  uuid = "CE351FDB-2552-45EB-8BDC-1274EA42CA6A - 9c325e3c0795b7e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.deleteImage(id: Swift.String, image: Swift.String) -&gt; ()"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "231"
+                  endingLineNumber = "231"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA047230-5550-49E7-84C1-EA14965227D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechnicalTest/ImageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "retrieveImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA047230-5550-49E7-84C1-EA14965227D4 - 1e15b4ee55b6001b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.retrieveImage() -&gt; ()"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "1704">
+               </Location>
+               <Location
+                  uuid = "DA047230-5550-49E7-84C1-EA14965227D4 - 2b754a8174032819"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TechnicalTest.ImageViewModel.retrieveImage() -&gt; ()"
+                  moduleName = "TechnicalTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/figo/Swift%20Projects/InterviewTech/TechnicalTest/TechnicalTest/ImageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBDF028B-998D-4C34-829A-7E3349098BBF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechnicalTest/ImageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "retrieveImage()"
             landmarkType = "7">
          </BreakpointContent>
