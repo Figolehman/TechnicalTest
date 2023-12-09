@@ -8,7 +8,7 @@
 import SwiftUI
 import PhotosUI
 
-struct MockDataView: View {
+struct MockImageView: View {
     @StateObject var textVM = TextViewModel()
     @StateObject var imageVM = ImageViewModel()
     
@@ -110,5 +110,5 @@ struct MockDataView: View {
 }
 
 #Preview {
-    MockDataView()
+    MockImageView()
 }
