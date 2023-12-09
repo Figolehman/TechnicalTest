@@ -22,7 +22,6 @@ struct QRScannerView: View {
                     UIApplication.shared.open(url)
                 }
             }
-            
         }
     }
     
@@ -38,4 +37,8 @@ struct QRScannerView: View {
             }
         }
     }
+}
+
+#Preview {
+    QRScannerView()
 }

@@ -102,7 +102,9 @@ class ImageViewModel: ObservableObject {
                     
                     
                     db.collection("images").document("\(docName)").setData(["url": "\(path)"]) { error in
-                        print(error?.localizedDescription)
+                        if error != nil {
+                            print(error!.localizedDescription)
+                        }
                         self.fetchImages()
                         self.retrieveImage()
                     }

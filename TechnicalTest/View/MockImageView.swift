@@ -61,8 +61,8 @@ struct MockImageView: View {
             .sheet(item: $itemForUpdate, content: { item in
                 VStack {
                     Text("Change image to")
-                    
-                    PhotosPicker(selection: $inputUpdatePhoto) {
+
+                    PhotosPicker(selection: $inputUpdatePhoto, matching: .images) {
                         if inputUpdateImage == nil {
                             Text("Change Image")
                         } else {
@@ -96,7 +96,7 @@ struct MockImageView: View {
             .sheet(isPresented: $isPresentingPostSheet, content: {
                 VStack{
                     Text("Image")
-                    PhotosPicker(selection: $inputCreatePhoto) {
+                    PhotosPicker(selection: $inputCreatePhoto, matching: .images) {
                         if let image = self.inputCreateImage {
                             Image(uiImage: image)
                                 .resizable()
